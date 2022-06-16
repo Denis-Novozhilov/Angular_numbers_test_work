@@ -1,15 +1,23 @@
 <mat-card class="group__wrap">
-  <mat-card-title>{{title}}</mat-card-title>
-  <mat-card-subtitle>subtitle</mat-card-subtitle>
+  <mat-card-title class="group__title">{{title}}</mat-card-title>
+  <mat-card-subtitle>click to watch info</mat-card-subtitle>
   <div class="group__tab-wrap">
     <p *ngFor="let item of content" [innerText]="item" (click)="clickHandler($event)"></p>
   </div>
   <mat-card-content>
   </mat-card-content>
-  <!-- <button mat-raised-button color="basic" (click)="openDialog()">Launch dialog</button> -->
-  <button mat-raised-button color="basic" (click)="openDialog()">Launch dialog</button>
-  <mat-card-actions>
-  </mat-card-actions>
-  <mat-card-footer>footer</mat-card-footer>
 
+  <mat-form-field #form1 class="example-form-field" appearance="fill">
+    <mat-label>{{this.placeholder}}</mat-label>
+    <input required matInput type="text" [(ngModel)]="InputValue">
+    <button *ngIf="InputValue" matSuffix mat-icon-button aria-label="Clear" (click)="InputValue=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button [disabled]="!InputValue" (data-group)="title" mat-raised-button color="primary"
+    (click)="numService.onInputGetService($event, InputValue)">get {{SingleTitle}} info</button>
+  <hr>
+  <button (data-group)="title" mat-raised-button color="basic" 
+    (click)="onResetHandler($event)">Update {{title}}</button>
 </mat-card>

@@ -7,14 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ElementsGroupComponent } from './components/elements-group/elements-group.component';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogActions, MatDialogContent, MatDialogModule} from '@angular/material/dialog';
-import {MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogActions, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 // import { MatCardModule, MatButtonModule, MatDialogModule } from '@angular/material';
 
 import { ContentPipePipe } from './pipes/content-pipe.pipe';
 import { MyDialogComponent } from './components/my-dialog/my-dialog.component';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,9 @@ import {MatChipsModule} from '@angular/material/chips';
     AppRoutingModule,
     MatCardModule,
     MatChipsModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
     MatButtonModule,
     MatDialogModule,
   ],

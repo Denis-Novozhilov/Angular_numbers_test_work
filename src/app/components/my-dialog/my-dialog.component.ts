@@ -26,4 +26,8 @@ export class MyDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.numService.reset();
+  }
+
 }

@@ -32,10 +32,19 @@ export class MainContentComponent implements OnInit {
     } while (count);
     return res;
   }
-  ngOnInit(): void {
+  resetNumbers(): void {
     this.contentArrayNumbers = this.getContentRandomArray(8, 0, 10);
+  }
+  resetFacts(): void {
     this.contentArrayFacts = this.getContentRandomArray(8, 0, 100);
+  }
+  resetDates(): void {
     this.contentArrayDates = this.getDaysArray(8);
+  }
+  ngOnInit(): void {
+    this.resetNumbers();
+    this.resetFacts();
+    this.resetDates();
   }
 
 }
