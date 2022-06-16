@@ -5,6 +5,8 @@
 [] TS lessons
 [] clearlify TS
 [] clearlify CSS
+[] clear any types
+[] clear clg`s
 
 =========================================================drafts
     // let res: number[] = [];
