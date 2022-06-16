@@ -8,11 +8,9 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ElementsGroupComponent } from './components/elements-group/elements-group.component';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogActions, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-// import { MatCardModule, MatButtonModule, MatDialogModule } from '@angular/material';
 
-import { ContentPipePipe } from './pipes/content-pipe.pipe';
 import { MyDialogComponent } from './components/my-dialog/my-dialog.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
@@ -25,7 +23,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     MainContentComponent,
     ElementsGroupComponent,
-    ContentPipePipe,
     MyDialogComponent
   ],
   imports: [
@@ -44,8 +41,7 @@ import { FormsModule } from '@angular/forms';
   bootstrap: [AppComponent],
   exports: [
     MainContentComponent,
-    ElementsGroupComponent,
-    ContentPipePipe
+    ElementsGroupComponent
   ]
 })
 export class AppModule { }

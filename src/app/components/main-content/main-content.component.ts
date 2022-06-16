@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ElementsGroupComponent } from '../elements-group/elements-group.component';
 
 @Component({
   selector: 'app-main-content',
@@ -14,6 +15,8 @@ export class MainContentComponent implements OnInit {
   contentArrayNumbers: number[] = [];
   contentArrayFacts: number[] = [];
   contentArrayDates: string[] = [];
+
+  idIntervalResetAll: null | ReturnType<typeof setTimeout> = null;
 
   getDaysArray(count: number = 5): Array<string> {
     let res: Array<string> = [];
@@ -41,10 +44,24 @@ export class MainContentComponent implements OnInit {
   resetDates(): void {
     this.contentArrayDates = this.getDaysArray(8);
   }
-  ngOnInit(): void {
+
+  resetAll(): void {
     this.resetNumbers();
     this.resetFacts();
     this.resetDates();
   }
 
+  ngOnInit(): void {
+    this.resetAll();
+    this.idIntervalResetAll = setInterval(() => {
+      this.resetAll();
+    }, 5000);
+  }
+
+  ngOnDestroy() {
+    if (this.idIntervalResetAll) {
+      clearInterval(this.idIntervalResetAll);
+    }
+  }
+  
 }

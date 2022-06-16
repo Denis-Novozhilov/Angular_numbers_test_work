@@ -1,6 +1,5 @@
   <h1 mat-dialog-title>{{singleIdentity}} [{{numService.currentValue}}]</h1>
   <div mat-dialog-content *ngIf="numService.isMessageLoaded;else loading_content">{{numService.currentMessage}}</div>
-  <!-- <div mat-dialog-content >{{numService.currentMessage}}</div> -->
   <div mat-dialog-actions>
     <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
   </div>

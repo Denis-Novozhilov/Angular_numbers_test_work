@@ -1,6 +1,6 @@
 <mat-card class="group__wrap">
   <mat-card-title class="group__title">{{title}}</mat-card-title>
-  <mat-card-subtitle>click to watch info</mat-card-subtitle>
+  <mat-card-subtitle>updates every 5s</mat-card-subtitle>
   <div class="group__tab-wrap">
     <p *ngFor="let item of content" [innerText]="item" (click)="clickHandler($event)"></p>
   </div>

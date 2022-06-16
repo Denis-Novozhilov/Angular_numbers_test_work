@@ -21,12 +21,6 @@ export class ElementsGroupComponent implements OnInit {
     public mainContent: MainContentComponent
   ) { }
 
-  /*
-      this.contentArrayNumbers = this.getContentRandomArray(8, 0, 10);
-      this.contentArrayFacts = this.getContentRandomArray(8, 0, 100);
-      this.contentArrayDates = this.getDaysArray(8);
-  */
-
   SingleTitle: string = '';
   InputValue: string = '';
   placeholder: string = '';
@@ -55,13 +49,11 @@ export class ElementsGroupComponent implements OnInit {
         this.mainContent.resetDates();
         break;
       default:
-        this.mainContent.resetNumbers();
-        this.mainContent.resetFacts();
-        this.mainContent.resetDates();
+        this.mainContent.resetAll();
         break;
     }
   }
-
+  
   ngOnInit(): void {
     this.SingleTitle = (this.title.slice(0, this.title.length - 1)).toUpperCase();
     switch (this.SingleTitle) {
@@ -78,5 +70,7 @@ export class ElementsGroupComponent implements OnInit {
         this.placeholder = 'write some num';
         break;
     }
+
   }
+
 }

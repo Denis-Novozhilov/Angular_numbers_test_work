@@ -15,6 +15,7 @@ export class MyDialogComponent implements OnInit {
     ) {
 
   }
+  
   singleIdentity = this.numService.currentIdentity.slice(0,this.numService.currentIdentity.length - 1);
 
   title: any = "NoTitle";
