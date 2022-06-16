@@ -1,0 +1,14 @@
+[] delete from all Pipe - contentPipe
+[] include material UI components as much as possible
+[] check and clear all errors in console
+[] ExpressionChangedAfterItHasBeenCheckedError:
+[] TS lessons
+[] clearlify TS
+[] clearlify CSS
+
+=========================================================drafts
+    // let res: number[] = [];
+    // for (let i = 0; i < exp; i++) {
+    //   res.push(Math.ceil(Math.abs((Math.random() * max) - (Math.random() * min))));
+    // }
+    // return res;

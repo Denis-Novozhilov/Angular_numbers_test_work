@@ -1,0 +1,14 @@
+<mat-card class="group__wrap">
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-card-subtitle>subtitle</mat-card-subtitle>
+  <div class="group__tab-wrap">
+    <p *ngFor="let item of content" 
+      [innerText]="item"
+      (click)="clickHandler($event)"
+    ></p>
+  </div>
+  <mat-card-content>
+  </mat-card-content>
+  <mat-card-actions>actions</mat-card-actions>
+  <mat-card-footer>footer</mat-card-footer>
+</mat-card>
